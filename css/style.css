@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  font-size: 70px;
+  font-family: serif;
+  margin: 20px 0;
+}
+.bxx {
+  border: 2px solid black;
+  transition: 0.3s ease-in;
+}
+.bxx:hover {
+  box-shadow: 15px 15px 15px black;
+  transition: 0.3s ease-out;
+  transform: translate(5px, 5px);
+}
+.container {
+  margin: 0 auto;
+  width: 1000px;
+  display: grid;
+  grid-auto-columns: minmax(80px, auto);
+  grid-auto-rows: minmax(220px, auto);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 50px;
+}
+#box1 {
+  background-color: gold;
+  background-image: url(../images/8.jpg);
+  background-size: contain;
+  background-position: center;
+}
+#box2 {
+  background-color: rgb(154, 140, 61);
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-image: url(../images/4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#box3 {
+  background-color: rgb(40, 39, 36);
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-image: url(../images/6.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+#box4 {
+  background-color: rgb(213, 213, 209);
+  background-image: url(../images/5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box5 {
+  background-color: rgb(205, 205, 26);
+  background-image: url(../images/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#box6 {
+  background-color: rgb(127, 207, 30);
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-image: url(../images/9.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    grid-template-columns: repeat(5, 3fr);
+    margin: 20px;
+  }
+  h1 {
+    font-size: 15px;
+    text-align: center;
+  }
+}
